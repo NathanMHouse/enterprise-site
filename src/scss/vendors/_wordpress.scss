@@ -1,0 +1,154 @@
+/**
+ * Description:     WordPress Styles
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+---------------------------------------------------------------- 
+1.0 General
+2.0 WYSIWYG
+ 
+
+/*--------------------------------------------------------------
+1.0 General
+--------------------------------------------------------------*/
+.sticky {}
+.gallery-caption {}
+.commentlist .bypostauthor {}
+.commentlist li ul.children li.bypostauthor {}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+
+/*--------------------------------------------------------------
+2.0 WYSIWYG
+--------------------------------------------------------------*/
+.entry-content {
+  .media-image {
+    @include breakpoint(small only) {
+        display: block;
+        text-align: center;
+    }
+  }
+  img {
+    height: auto;
+    margin: 0 0 1.5em 0;
+    @include breakpoint(medium) {
+        padding: 1em;
+    }
+  }
+}
+.alignleft, img.alignleft {
+  margin: 1em auto;
+  @include breakpoint(medium) {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+  }
+}
+.alignright, img.alignright {
+  margin: 1em auto;
+  @include breakpoint(medium) {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+.aligncenter, img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  clear: both;
+}
+.alignnone, img.alignnone {
+}
+.fullwidth, img.fullwidth {
+  width: 100%;
+}
+.redborder, img.redborder {
+  border-bottom: 6px solid $red-50;
+}
+figure {
+  &.wp-caption {
+    margin-bottom: 1rem;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    text-align: center;
+    @include breakpoint(medium down) {
+      width: 100% !important;
+    }
+    &.alignright {
+      margin-left: 1.5em;
+    }
+    &.alignleft {
+      margin-right: 1.5em;
+    }
+  }  
+}
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  @include breakpoint(small only) {
+    width: 100%;
+  }
+}
+.wp-caption p.wp-caption-text {
+  line-height: 1.5;
+  font-size: 10px;
+  margin: 0;
+}
+.wp-caption .wp-caption-text {
+    color: $grey-50;
+    line-height: 1.5em;
+    margin-top: .5em;
+    text-align: left;
+  @include breakpoint(medium down) {
+    text-align: center;
+  }
+}
+.wp-smiley {
+  margin: 0 !important;
+  max-height: 1em;
+}
+blockquote.left {
+  margin-right: 20px;
+  text-align: right;
+  margin-left: 0;
+  width: 33%;
+  float: left;
+}   
+blockquote.right {
+  margin-left: 20px;
+  text-align: left;
+  margin-right: 0;
+  width: 33%;
+  float: right;
+}
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}

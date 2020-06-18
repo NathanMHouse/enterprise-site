@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 15 0 15 18 0 18"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Widget" transform="translate(-24.000000, -23.000000)">
+            <g transform="translate(-1.000000, 0.000000)" id="Group-3">
+                <g transform="translate(25.000000, 23.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M7.49983917,10.8439654 C5.44817086,10.8439654 3.77822511,9.23019638 3.77822511,7.24754585 C3.77822511,5.26396281 5.44817086,3.65112626 7.49983917,3.65112626 C9.55247244,3.65112626 11.2214532,5.26396281 11.2214532,7.24754585 C11.2214532,9.23019638 9.55247244,10.8439654 7.49983917,10.8439654 M7.49983917,0 C3.36498049,0 0,3.25108373 0,7.24754585 C0,8.86916344 0.573991079,10.4641271 1.61823991,11.7397094 L6.31655552,17.4483971 C6.92190784,18.1838288 8.07785092,18.1839065 8.68312283,17.4483971 L13.3845746,11.736368 C14.4260893,10.4641271 15,8.86885261 15,7.2471573 C14.9996783,3.25108373 11.6357432,0 7.49983917,0" id="Fill-1" fill="#C20430" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

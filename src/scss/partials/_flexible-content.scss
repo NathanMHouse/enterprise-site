@@ -1,0 +1,537 @@
+/**
+ * Description:     Flexible Content
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Flexible Content
+	1.1 Shared
+  1.2 Media and Text Row
+  1.3 Tab Row
+  1.4 Subnavigation Row
+  1.5 Icon Row
+  1.6 CTA Row
+  1.7 Testimonial Row
+  1.8 Featured Post Row
+
+
+/*--------------------------------------------------------------
+1.0 Flexible Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Shared
+--------------------------------------------------------------*/
+.content-row-subtitle {
+	color: $grey-90;
+	margin: 0 0 1.25rem;
+	@include breakpoint(medium down) {
+		margin: 0 0 .75rem;
+	}
+}
+
+.content-row-description {
+	font-family: $body-font-family;
+	font-weight: 400;
+	margin-bottom: 2.5rem;
+	text-align: center;
+	@include breakpoint(medium down) {
+		margin-bottom: 2rem;
+	}
+}
+
+.content-row-ctas {
+	@include breakpoint(medium down) {
+		margin-bottom: 0;
+	}
+	@include breakpoint(small only) {
+		margin-top: 20px;
+	}
+}
+
+.content-row-form {
+	input {
+		border: none;
+	}
+}
+
+.content-row-form-message {
+	color: $white;
+	text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+1.2 Media and Text Row
+--------------------------------------------------------------*/
+.content-row-media-and-text-row {
+	.content-row-media {
+		@include breakpoint(small only) {
+			margin-bottom: 20px;
+			order: 1;
+		}
+		.content-row-media-video {
+			opacity: 1;
+			transition: opacity .35s ease-in-out;
+			&:active,
+			&:focus,
+			&:hover {
+				cursor: pointer;
+				opacity: .7;
+				transition: opacity .35s ease-in-out;
+			}
+		}
+	}
+	.content-row-content {
+		@include breakpoint(small only) {
+			order: 2;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.3 Tab Row
+--------------------------------------------------------------*/
+.content-row-tab-row {
+	.content-row-title {
+		text-align: center;
+	}
+	.content-row-description {
+		margin-bottom: 3.75rem;
+		@include breakpoint(small only) {
+			margin-bottom: 2rem;
+		}
+	}
+	.content-row-tab-tabs {
+		&.content-row-tab-tabs-w-controls {
+			@include breakpoint(large) {
+				padding-left: 32px;
+			}
+			@include breakpoint(medium only) {
+				padding-left: 16px;
+			}
+			@include breakpoint(small only) {
+				overflow-y: hidden;
+			}
+		}
+		.content-row-tab-tab {
+			display: flex !important;
+			@include breakpoint(small only) {
+				width: initial !important;
+			}
+			.content-row-tab-tab-item {
+				margin-bottom: 1.875em;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+				.content-row-tab-tab-icon {
+					display: inline-block;
+					text-align: center;
+					vertical-align: top;
+					width: 10%;
+					img {
+						@include breakpoint(small only) {
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			.content-row-tab-tab-item-w-icon {
+				.content-row-tab-tab-item-content {
+					padding-left: 10px;
+					width: 88%;
+				}		
+			}
+			.content-row-tab-tab-item-wo-icon {
+				.content-row-tab-tab-item-content {
+					width: 100%;
+				}		
+			}
+			.content-row-tab-tab-item-content {
+				display: inline-block;
+				.content-row-tab-tab-item-title {
+					margin: 0 0 .5rem;
+				}
+				.content-row-tab-tab-item-description {
+					margin-bottom: 1rem;
+				}
+				.content-row-tab-tab-item-cta {
+					&:after {
+						background-image: url('assets/img/enterprise-site-icon-right-chevron.svg');
+						background-position: 50%;
+						background-repeat: no-repeat;
+						content: '';
+						display: inline-block;
+						height: 10px;
+						margin-left: 0.375em;
+						width: 10px;
+					}
+				}
+			}		
+		}
+	}
+	.content-row-tab-controls {
+		.content-row-tab-controls-dots {
+			display: inline-block;
+			list-style: none;
+			margin: 0;
+			padding: 0 1.25em 0 0;
+			@include breakpoint(medium) {
+				border-right: 2px solid $red-50;
+			}
+			@include breakpoint(medium only) {
+				padding: 0 .5em 0 0;
+			}
+			@include breakpoint(small only) {
+				border-bottom: 2px solid $red-50;
+				display: block;
+				margin-bottom: 1.25rem;
+				padding: 0 0 1.25rem;
+				text-align: center;
+			}
+			li {
+				margin: 0 0 1.875rem;
+				position: relative;
+				@include breakpoint(medium) {
+					text-align: right;
+				}
+				button {
+					@include breakpoint(medium) {
+						text-align: right;
+					}
+				}
+				@include breakpoint(small only) {
+					display: inline-block;
+					margin: 0 1rem .5rem 0;
+				}
+				.content-row-tab-controls-dots-dot {
+					color: $grey-50;
+					font-family: $body-font-family;
+	        font-size: 1.125em;
+	        font-weight: 700;
+	        line-height: 1.375rem;
+	        transition: color .35s ease-in-out;
+	        @include breakpoint(medium down) {
+						font-size: 1em;
+						line-height: 1.25rem;
+					}
+	        &:active,
+	        &:focus,
+	        &:hover {
+	        	color: $red-10;
+	        	cursor: pointer;
+	        	transition: color .35s ease-in-out;
+	        }
+				}
+				&:last-child {
+					margin: 0;
+				}
+				&.slick-active {
+					.content-row-tab-controls-dots-dot {
+						color: $red-50;
+						transition: color .35s ease-in-out;
+					}
+					&:after {
+						@include breakpoint(medium) {
+							background-image: url('assets/img/enterprise-site-ise-site-icon-right-chevron.svg');
+							background-position: 50%;
+							background-repeat: no-repeat;
+							background-size: contain;
+							content: '';
+							display: inline-block;
+							height: 16px;
+							margin-top: -8px;
+							position: absolute;
+							right: -34px;
+							top: 50%;
+							width: 16px;
+						}
+						@include breakpoint(medium only) {
+							right: -22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.4 Subnavigation Row
+--------------------------------------------------------------*/
+.content-row-subnavigation-row {
+	.content-row-subnavigation-subnav {
+		@include breakpoint(large) {
+			padding-left: 1.75rem;
+		}
+		@include breakpoint(medium) {
+			border-left: 2px solid $red-50;
+			padding-left: 1rem;
+		}
+		@include breakpoint(small only) {
+			display: none;
+		}
+		.pagenav {
+			font-size: 1.0625em;
+			list-style: none;
+			ul {
+				font-size: 1rem;
+				list-style: none;
+				margin: 1em 0 0;
+				padding: 0;
+				li {
+					font-weight: 400;
+					margin: 0 0 1em;
+					&.current_page_item {
+						a {
+							font-weight: 700;
+						}
+						.children {
+							a {
+								font-weight: 400;
+							}
+						}
+					}
+					a {
+						color: $red-50;
+						text-decoration: none;
+						transition: all .35s ease-in-out;
+						&:active,
+						&:focus,
+						&:hover {
+							color: $red-10;
+							text-decoration: underline;
+							transition: all .35s ease-in-out;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.5 Icon Row
+--------------------------------------------------------------*/
+.content-row-icon-row {
+	.content-row-title {
+		text-align: center;
+	}
+	.content-row-icon-block {
+		@include breakpoint(small only) {
+			margin-bottom: 1.875rem;
+		}
+		&:last-of-type {
+			@include breakpoint(small only) {
+				margin-bottom: 0;
+			}	
+		}
+		.content-row-icon-block-icon {
+			display: inline-block;
+			text-align: center;
+			vertical-align: top;
+			width: 15%;
+			img {
+				@include breakpoint(small only) {
+					max-width: 90%;
+				}
+			}
+		}
+		.content-row-icon-block-content {
+			display: inline-block;
+			padding-left: 10px;
+			width: 83%;
+			a {
+				@include breakpoint(small only) {
+					display: inline-block;
+					margin: 0;
+					max-width: initial;
+					width: initial;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.6 CTA Row
+--------------------------------------------------------------*/
+.content-row-cta-row {
+	&.content-row-background-image {
+		a,
+    a:visited {
+        color: $white;
+        &.btn-text {
+            &:active,
+            &:focus,
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+		.content-row-title {
+			color: $white;
+		}
+		.content-row-description {
+			color: $white;
+			@include breakpoint(small only) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.content-row-title {
+		text-align: center;
+	}
+	.content-row-ctas {
+		text-align: center;
+	}
+	.content-row-form {
+		input {
+			flex: 3;
+		}
+		button {
+			flex: 1
+		}
+		@include breakpoint(small only) {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.7 Testimonial Row
+--------------------------------------------------------------*/
+.content-row-testimonial-row {
+	.content-row-testimonial-image-image {
+		align-items: center;
+		display: flex;
+		@include breakpoint(small only) {
+			margin: 0 auto;
+			max-width: 30%;
+		}
+		@include breakpoint(460 down) {
+			max-width: 50%;
+		}
+		&.client {
+			border-radius: 50%;
+		}
+	}
+	.content-row-testimonial-content {
+		figure {
+			margin: 0;
+		}
+		.content-row-testimonial-content-testimonial {
+			margin: 0;
+			main {
+				display: inline;
+				position: relative;
+				&:after,
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 13px;
+					position: absolute;
+					width: 16px;
+				}
+				&::after {
+					background-image: url('assets/img/enterprise-site-ise-site-icon-right-quote.svg');
+					bottom: -.75rem;
+					right: -1.5rem;
+					@include breakpoint(460 down) {
+						bottom: -1.5rem;
+						right: -.75rem;
+					}
+				}
+				&::before {
+					background-image: url('assets/img/enterprise-site-ise-site-icon-left-quote.svg');
+					left: -1.5rem;
+					top: -.75rem;
+					@include breakpoint(460 down) {
+						left: -.75rem;
+						top: -1.5rem;
+					}
+				}
+			}
+			footer {
+				color: $blue-100;
+				margin-top: 1.5rem;
+				font-family: $headline-font-family;
+				font-size: 0.75em;
+				font-weight: 500;
+				@include breakpoint(small only) {
+					line-height: 1.5;
+				}
+				cite {
+					font-style: normal;
+					@include breakpoint(small only) {
+						display: block;
+					}
+				}
+			}	
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+1.8 Featured Post Row
+--------------------------------------------------------------*/
+.content-row-featured-posts-row {
+
+	.content-row-title {
+		text-align: center;
+	}
+	.content-row-featured-posts-post {
+		@include breakpoint(medium down) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.content-row-featured-posts-dots {
+		display: block;
+		list-style: none;
+		margin: 20px 0 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+		li {
+			border: 1px solid $grey-30;
+			border-radius: 50%;
+			display: inline-block;
+			height: 16px;
+			margin-right: 1rem;
+			transition: all .35s ease-in-out;
+			width: 16px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&.slick-active {
+				border-color: $red-50;
+				transition: all .35s ease-in-out;
+				&:active,
+				&:focus,
+				&:hover {
+					border-color: $red-10;
+					transition: all .35s ease-in-out;
+				}
+			}
+			&:active,
+			&:focus,
+			&:hover {
+				cursor: pointer;
+			}
+			button {
+				display: none;
+			}
+		}
+	}
+}

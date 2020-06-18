@@ -1,0 +1,200 @@
+/**
+ * Description:     Footer
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Footer
+	
+  
+
+/*--------------------------------------------------------------
+1.0 Footer
+--------------------------------------------------------------*/
+.site-footer {
+	background-color: $grey-90;
+	border-top: 4px solid $red-50;
+	padding: 60px 0 30px;
+	@include breakpoint(small only) {
+		padding: 30px 0;
+	}
+	.site-footer-top {
+		.site-footer-top-branding {
+			.site-footer-seo-copy {
+				@include breakpoint(small only) {
+					display: inline-block;
+					text-align: left;
+					width: 60%;
+				}
+			}
+			.site-footer-company-logo {
+				margin-bottom: 1.625rem;
+				max-width: 200px;
+				@include breakpoint(small only) {
+					display: block;
+					margin: 0 auto 3rem;
+				}
+			}
+			.site-footer-award-logo {
+				margin-bottom: 3rem;
+				@include breakpoint(small only) {
+					display: inline-block;
+					float: right;
+					margin: 0 auto;
+					max-width: 300px;
+					opacity: .5;
+					padding: 0 20px;
+					width: 40%;
+					vertical-align: top;
+				}
+			}
+			@include breakpoint(small only) {
+				display: block;
+				margin: 0 auto 1.25rem;
+			}
+		}
+		.site-footer-list-menu {
+			padding-top: 3rem;
+			@include breakpoint(small only) {
+				padding: 0;
+			}
+		}
+		@include breakpoint(small only) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	.site-footer-list-menu,
+	.site-footer-bottom-contact-details {
+		padding-right: 4rem;
+		@include breakpoint(medium down) {
+			padding: 0
+		}
+		@include breakpoint(small only) {
+			margin-bottom: 1.25rem;
+		}
+	}
+	.site-footer-bottom {
+		@include breakpoint(small only) {
+			margin-bottom: 2rem;
+		}
+	}
+	.site-footer-list-menu {
+		font-family: $headline-font-family;
+		list-style: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-left: 0;
+		li {
+			line-height: 1.25;
+			margin-bottom: 0.25rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			h5 {
+				a,
+				a:visited {
+					font-size: 1em;
+				}
+			}
+			a,
+			a:visited {
+				color: $white;
+				font-size: 0.875em;
+				text-decoration: none;
+			}
+			a:active,
+			a:focus,
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		&.site-footer-bottom-social {
+			.site-footer-list-menu-title {
+				display: block;
+				margin-bottom: 1rem;
+			}
+			li {
+				display: inline-block;
+				margin-bottom: 0;
+				margin-right: 1rem;
+				@include breakpoint(medium down) {
+					margin-right: .75rem;
+				}
+				@include breakpoint(small only) {
+					margin-right: .5rem;
+				}
+				&:first-of-type {
+					display: block;
+					margin-right: 0;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+				a:active,
+				a:focus,
+				a:hover {
+					opacity: .7;
+					transition: opacity .35s ease-in-out;
+				}
+			}
+		}
+		&:last-of-type {
+			@include breakpoint(small only) {
+				margin-bottom: 0;
+			}
+		}
+		@include breakpoint(small only) {
+			margin-bottom: 1.25rem;
+			padding: 0;
+		}
+	}
+	.site-footer-list-menu-title {
+		border-bottom: 2px solid $red-50;
+		color: $white;
+		font-weight: 700;
+		margin-bottom: .5rem;
+		padding-bottom: 0.125rem;
+		a,
+		a:visited {
+			font-size: 1em;
+			text-decoration: none;
+		}
+		a:active,
+		a:focus,
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	.site-footer-legal {
+		p {
+			margin-bottom: 0;
+			a,
+			a:visited {
+				color: $white;
+				text-decoration: none;
+			}
+			a:active,
+			a:focus,
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		@include breakpoint(small only) {
+			text-align: center;
+		}
+	}
+	p {
+		color: $white;
+		font-family: $headline-font-family;
+		font-size: 0.875em;
+		line-height: 1.125rem;
+		margin-bottom: 3.125rem;
+		@include breakpoint(small only) {
+			margin-bottom: 0;
+		}
+	}
+}

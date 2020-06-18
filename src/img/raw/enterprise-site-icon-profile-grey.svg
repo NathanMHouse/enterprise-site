@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 16 0 16 7.92626728 0 7.92626728"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP-Copy-5" transform="translate(-219.000000, -3180.000000)">
+            <g id="Posts" transform="translate(0.000000, 2630.000000)">
+                <g id="Post-Copy-3" transform="translate(60.000000, 184.000000)">
+                    <g id="Group-6" transform="translate(159.000000, 366.589862)">
+                        <g id="Group-3" transform="translate(0.000000, 8.917051)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M0,7.92626728 L0,5.30865699 C0,2.38933804 2.21317144,0 4.91815876,0 L11.0818412,0 C13.7868286,0 16,2.38933804 16,5.30865699 L16,7.92626728 L0,7.92626728 Z" id="Fill-1" fill="#828689" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M8,7.92626728 C5.79067756,7.92626728 4,6.15209366 4,3.96313364 C4,1.77417362 5.79067756,0 8,0 C10.208938,0 12,1.77417362 12,3.96313364 C12,6.15209366 10.208938,7.92626728 8,7.92626728 Z" id="Fill-4" fill="#828689"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

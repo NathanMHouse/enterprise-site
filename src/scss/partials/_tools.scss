@@ -1,0 +1,1183 @@
+/**
+ * Description:     Tools
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Glossary Tool
+2.0 External Resources Tool
+3.0 Borders Tool
+	3.1 Archive
+	3.2 Single
+4.0 Locations Tool
+	4.1 Archive
+	4.2 Single
+	4.3 Social Share
+
+
+/*--------------------------------------------------------------
+1.0 Glossary Tool
+--------------------------------------------------------------*/
+#tool-glossary {
+	.tool-glossary-filter {
+		background-color: $grey-10;	
+		@include breakpoint(large) {
+	    padding: 40px 0;
+	  }
+	  @include breakpoint(medium down) {
+	    padding: 20px 0;
+	  }
+	}
+	.tool-glossary-terms {
+		align-items: center;
+		border-bottom: 1px solid $grey-50;
+		border-top: 1px solid $grey-50;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 30px 0 0;
+		position: relative;
+		min-height: 50vh;
+		@include breakpoint(large) {
+			min-height: 25vh;
+		}
+		@include breakpoint(medium down) {
+    	padding-top: 30px;
+  	}
+		.tool-glossary-terms-empty {
+			text-align: center;
+		}
+		.tool-glossary-terms-term {
+			border-bottom: 1px solid $grey-30;
+			flex: 0 0 100%;
+			padding: 30px 0;
+			position: relative;
+			&:first-of-type {
+				padding: 0 0 30px;
+			}
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+			.tool-glossary-terms-term-body-cta {
+				display: inline-block;
+				margin-top: 20px;
+			}
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}	
+}
+
+
+/*--------------------------------------------------------------
+2.0 External Resources Tool
+--------------------------------------------------------------*/
+#tool-external-resources {
+	.tool-external-resources-filter {
+		background-color: $grey-10;	
+		padding: 40px 0;
+		@include breakpoint(medium down) {
+	    padding: 20px 0;
+	  }
+	}
+	.tool-external-resources-resources {
+		align-items: center;
+		border-bottom: 1px solid $grey-50;
+		border-top: 1px solid $grey-50;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 30px 0 0;
+		position: relative;
+		min-height: 50vh;
+		@include breakpoint(large) {
+			min-height: 25vh;
+		}
+		@include breakpoint(medium down) {
+    	padding-top: 30px;
+  	}
+		.tool-external-resources-resources-empty {
+			text-align: center;
+		}
+		.tool-external-resources-resource {
+			border-bottom: 1px solid $grey-30;
+			flex: 0 0 100%;
+			padding: 30px 0;
+			position: relative;
+			&:first-of-type {
+				padding: 0 0 30px;
+			}
+			a,
+			a:visited {
+				text-decoration: none;
+				&:after {
+					background-image: url("assets/img/enterprise-site-icon-right-chevron.svg");
+					background-position: 50%;
+					background-repeat: no-repeat;
+					content: '';
+					display: inline-block;
+					height: 10px;
+					margin-left: 0.375em;
+					width: 10px;
+				}
+			}
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}	
+}
+
+
+/*--------------------------------------------------------------
+3.0 Borders Tool
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1 Archive
+--------------------------------------------------------------*/
+#tool-borders {
+	.tool-borders-filter {
+		background-color: $grey-10;
+		padding: 40px 0;
+		@include breakpoint(medium down) {
+	    padding: 20px 0;
+	  }
+	}
+	overflow: hidden;
+	.tool-borders-table-container {
+		min-height: 50vh;
+		padding-bottom: 60px;
+		position: relative;
+		@include breakpoint(medium down) {
+	    padding-bottom: 30px;
+	  }
+	  @include breakpoint(small only) {
+	  	border-top: 1px solid $grey-50;
+	  }
+		.tool-borders-table-header {
+			background-color: $grey-30;
+			border: none;
+			tr {
+				border-bottom: 1px solid $grey-50;
+				@include breakpoint(small only) {
+					left: -9999em;
+			    position: absolute;
+			    top: -9999em;
+			  }
+				th {
+					padding: 1.5rem 1rem 1.5rem;
+					@include breakpoint(medium only) {
+						padding: 1.5rem .5rem 1.5rem;
+					}
+					&:first-child {
+						position: relative;
+						&::before {
+							background-color: $grey-30;
+			        border-bottom: 1px solid $grey-50;
+			        bottom: -1px;
+			        content: '';
+			        display: block;
+			        position: absolute;
+			        top: 0;
+			        width: 100vw;
+						}
+						&::before {
+			        right: 100%;
+						}
+					}
+					&:last-child {
+						position: relative;
+						text-align: right;
+						&::after {
+							background-color: $grey-30;
+			        border-bottom: 1px solid $grey-50;
+			        bottom: -1px;
+			        content: '';
+			        display: block;
+			        position: absolute;
+			        top: 0px;
+			        width: 100vw;
+						}
+						&::after {
+							left: 100%;
+						}
+					}
+				}
+	  	}
+		}
+		.tool-borders-table-body {
+			border: none;
+			.tool-borders-table-body-row-summary,
+			.tool-borders-table-body-row-noresults {
+				border-bottom: 1px solid $grey-30;
+				td {
+					padding: 2rem 1.25rem 2rem;
+					@include breakpoint(medium down) {
+						padding: 2rem 1rem 2rem;
+					}
+					&:first-child {
+						position: relative;
+						&::before {
+			   			@include breakpoint(medium) {
+								border-bottom: 1px solid $grey-30;
+				        bottom: -1px;
+				        content: '';
+				        display: block;
+				        position: absolute;
+				        right: 100%;
+				        top: -1px;
+				        width: 100vw;
+				        z-index: 1;
+							}
+						}
+					}
+					&:last-child {
+						position: relative;
+						&::after {
+							@include breakpoint(medium) {
+								border-bottom: 1px solid $grey-30;
+				        bottom: -1px;
+				        content: '';
+				        display: block;
+				        left: 100%;
+				        position: absolute;
+				        top: -1px;
+				        width: 100vw;
+				        z-index: 1;
+			        }
+						}
+					}
+				}
+			}
+			.tool-borders-table-body-row-summary {
+				td {
+					@include breakpoint(small only) {
+				    align-content: center;
+				    display: flex;
+				    justify-content: flex-start;
+				    padding: .25rem 0 .25rem 50%;
+				    position: relative;
+				  }
+			   	&::before {
+						@include breakpoint(small only) {
+							content: attr(data-label);
+							display: inline-block;
+							font-weight: 700;
+							line-height: 1.5;
+							margin-left: -100%;
+							position: relative;
+							top: initial;
+							width: 50%;
+							z-index: 1;
+						}
+						@include breakpoint(419 down) {
+							width: 80%;
+						}
+				  }
+				  &::after {
+				  	@include breakpoint(small only) {
+					  	content: '';
+					  	height: 95%;
+					  	left: 1px;
+					  	position: absolute;
+					  	top: 1px;
+					  	width: 45%;
+					  	z-index: 0;
+				  	}
+				  }
+				  &:first-child {
+						@include breakpoint(small only) {
+							margin: 1rem 0 0;
+						}
+					}
+					&:last-child {
+						text-align: right;
+						@include breakpoint(small only) {
+							margin: 1rem 0;
+							padding: 0;
+						}
+					 	&::before,
+					 	&::after {
+							@include breakpoint(small only) {
+								display: none;
+							}
+					  }
+					}
+				}			
+				.tool-borders-table-body-row-details-trigger {
+					position: relative;
+					@include breakpoint(small only) {
+						border: 2px solid #c20430;
+						border-radius: 2px;
+						color: #c20430;
+						letter-spacing: 0.09375rem;
+						padding: 0.875rem 1.5rem;
+						position: relative;
+						width: 100%;
+						z-index: 1;
+					}
+					&::before,
+			    &::after {
+			    	@include breakpoint(medium) {
+			        background-position: 50%;
+			        background-repeat: no-repeat;
+			        background-size: contain;
+			        content: '';
+			        display: inline-block;
+			        right: 0;
+			        margin-top: -10px;
+			        position: absolute;
+			        top: 50%;
+			        transition: all .175s ease-in-out;
+			      }
+			    }
+					&::before {
+						@include breakpoint(medium) {
+							background-image: url("assets/img/enterprise-site-ise-site-icon-plus-red.svg");
+							height: 20px;
+							transform: rotate(0deg) scale(1);
+							width: 18px;
+						}
+					}
+				 	&::after {
+				 		@include breakpoint(medium) {
+			        background-image: url('assets/img/enterprise-site-ise-site-icon-close-red.svg');
+			        height: 20px;
+			        opacity: 0;
+			        transform: rotate(-90deg) scale(0);
+			        width: 18px;
+			      }
+			    }
+					&.active {
+						&::before {
+							@include breakpoint(medium) {
+								opacity: 0;
+			          transition: all .175s ease-in-out;
+			          transform: rotate(-90deg) scale(0);
+			        }
+						}
+						&::after {
+							@include breakpoint(medium) {
+								opacity: 1;
+			          transition: all .175s ease-in-out;
+			          transform: rotate(0deg) scale(1);
+			        }
+						}
+					}
+					.tool-borders-table-body-row-details-trigger-label {
+						position: relative;
+						z-index: -1;
+					}
+				}
+			}
+			.tool-borders-table-body-row-noresults {
+				text-align: center;
+				td {
+					@include breakpoint(small only) {
+						justify-content: center;
+					}
+					&::before,
+					&::after {
+						@include breakpoint(small only) {
+							display: inline-block;
+						}	
+					}
+					&::before {
+						border-bottom: 1px solid $grey-30;
+		        bottom: -1px;
+		        content: '';
+		        display: block;
+		        position: absolute;
+		        right: 100%;
+		        top: -1px;
+		        width: 100vw;
+		        z-index: 1;
+					}
+					&::after {
+						border-bottom: 1px solid $grey-30;
+		        bottom: -1px;
+		        content: '';
+		        display: block;
+		        left: 100%;
+		        position: absolute;
+		        top: -1px;
+		        width: 100vw;
+		        z-index: 1;
+					}
+				}
+			}
+			.tool-borders-table-body-row-details {
+			  background-color: $white;
+			  border-bottom: 1px solid $grey-30;
+			  td {
+				  background-color: $grey-10;
+				  padding: 0;
+				  position: relative;
+				  &:before,
+				  &:after {
+					  background-color: $grey-10;
+					  border-bottom: 1px solid $grey-30;
+					  border-top: 1px solid $grey-30;
+					  bottom: -1px;
+					  content: '';
+					  display: block;
+					  position: absolute;
+					  top: -1px;
+					  width: 100vw;
+				  }
+				  ul {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+						&:first-of-type {
+							margin-bottom: .5rem;
+							@include breakpoint(small only) {
+								margin-bottom: .25rem;
+							}
+						}
+				  }
+				  &:before {
+				  	right: 100%;
+				  }
+				  &:after {
+				  	left: 100%;
+				  }
+				  .tool-borders-table-body-row-details-inner {
+				  	height: 0;
+					  overflow: hidden;
+					  transition: height 0.35s ease-in-out;
+					  > div {
+					  	padding: 20px 0;
+					  	&:first-of-type {
+					  		@include breakpoint(small only) {
+					  			padding: 20px 0 0;
+					  		}
+					  	}
+					  }
+					  .tool-borders-table-body-row-details-title {
+							border-bottom: 1px solid $grey-30;
+							margin-bottom: 1.25rem;
+							padding-bottom: 1.25rem;
+							@include breakpoint(small only) {
+								margin-bottom: 1rem;
+								padding-bottom: 1rem;
+							}
+							p {
+								@include breakpoint(medium) {
+									margin-bottom: 1.25rem;
+								}
+							}
+							.tool-borders-table-body-row-details-permalink {
+								&:after {
+									background-image: url("assets/img/enterprise-site-ise-site-icon-right-chevron.svg");
+								  background-position: 50%;
+								  background-repeat: no-repeat;
+								  content: '';
+								  display: inline-block;
+								  height: 10px;
+								  margin-left: 0.375em;
+								  width: 10px;
+								}
+							}
+					  }
+					  .tool-borders-table-body-row-details-contact {
+							border-bottom: 1px solid $grey-30;
+							margin-bottom: 1.25rem;
+							padding-bottom: 1.25rem;
+							@include breakpoint(small only) {
+								margin-bottom: 1rem;
+								padding-bottom: 1rem;
+							}
+							a,
+							a:visited {
+								text-decoration: none;
+							}
+					  	.tool-borders-table-body-row-details-contact-origin {
+					  		@include breakpoint(991 down) {
+					  			display: block;
+					  			margin-bottom: 1rem;
+					  			width: 100%;
+					  		}
+					  		@include breakpoint(small only) {
+							  	margin-bottom: 1rem;
+							  }
+					  		.tool-borders-table-body-row-details-contact-origin-phone,
+					  		.tool-borders-table-body-row-details-contact-origin-email,
+					  		.tool-borders-table-body-row-details-contact-origin-fax {
+					  			&:before {
+										background-position: 50%;
+										background-repeat: no-repeat;
+										content: '';
+										display: inline-block;
+										height: 14px;
+										margin-right: 8px;
+										width: 14px;
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-origin-phone {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-phone.svg');
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-origin-email {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-email.svg');
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-origin-fax {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-fax.svg');
+					  			}
+					  		}
+					  	}
+					  	.tool-borders-table-body-row-details-contact-destination {
+								@include breakpoint(991 down) {
+									display: block;
+									width: 100%;
+								}
+					  		.tool-borders-table-body-row-details-contact-destination-phone,
+					  		.tool-borders-table-body-row-details-contact-destination-email,
+					  		.tool-borders-table-body-row-details-contact-destination-fax {
+					  			&:before {
+										background-position: 50%;
+										background-repeat: no-repeat;
+										content: '';
+										display: inline-block;
+										height: 14px;
+										margin-right: 8px;
+										width: 14px;
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-destination-phone {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-phone.svg');
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-destination-email {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-email.svg');
+					  			}
+					  		}
+					  		.tool-borders-table-body-row-details-contact-destination-fax {
+					  			&:before {
+					  				background-image: url('assets/img/enterprise-site-ise-site-icon-fax.svg');
+					  			}
+					  		}
+					  	}
+					  }
+					  .tool-borders-table-body-row-details-weather {
+					    .tool-borders-table-body-row-details-weather-title {
+					    	h4 {
+					    		padding-right: .25rem;
+					    		@include breakpoint(small only) {
+						    		margin: 0 0 .25rem;
+						    	}
+					    		&:before {
+					    			background-image: url('assets/img/enterprise-site-ise-site-icon-cloud.svg');
+					    			background-position: 50%;
+								    background-repeat: no-repeat;
+								    content: '';
+								    display: inline-block;
+								    height: 14px;
+								    margin-right: 8px;
+								    width: 14px; 
+					    		}
+					    	}
+					    }
+					    .tool-borders-table-body-row-details-weather-origin,
+					    tool-borders-table-body-row-details-weather-destination {
+					    	margin: 0;
+					    	@include breakpoint(small only) {
+					    		margin: 0 0 1rem;
+					    	}
+					    }
+					    .tool-borders-table-body-row-details-weather-details {
+					    	text-transform: capitalize;
+					    }
+					  }
+					  .tool-borders-table-body-row-details-map {
+					  	border: 1px solid $grey-30;
+					  	height: 100%;
+							@include breakpoint(medium) {
+								min-height: 500px;
+							}
+							@include breakpoint(991 down) {
+								min-height: 400px;
+							}
+							@include breakpoint(small only) {
+								min-height: 300px;
+							}
+					  }
+				  }
+			  }
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+3.2 Single
+--------------------------------------------------------------*/
+.borders-post-meta {
+	list-style: none;
+	margin-bottom: 1.5rem;
+	padding: 0;
+	.is-active {
+		h4 {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	a,
+	a:visited {
+		text-decoration: none;
+		h4 {
+			margin: 0;
+			padding: 0;
+			&::after {
+				background-image: url('assets/img/enterprise-site-ise-site-icon-down-arrow.svg');
+				background-position: 50%;
+				background-repeat: no-repeat;
+				content: '';
+				display: inline-block;
+				height: 9px;
+				margin-left: 8px;
+				transition: all .35s ease-in-out;
+				width: 13px;
+			}
+		}
+	}
+	.borders-post-meta-content {
+		border-top: 1px solid grey-20;
+		padding-top: .5rem;
+		margin-top: .5rem;
+		@include breakpoint(medium down) {
+			display: none;
+		}
+		dt {
+			font-family: $body-font-family;
+			font-weight: 700;
+			@include breakpoint(medium only) {
+				display: inline-block;
+			}
+			@include breakpoint(small only) {
+				float: left;
+				margin-right: .5rem;
+				min-width: 50px;
+			}
+		}
+		dd {
+			margin: 0 0 1rem;
+			@include breakpoint(medium only) {
+				display: inline-block;
+				margin: 0 .75rem 0 0;
+			}
+			@include breakpoint(small only) {
+				margin: 0 0 .5rem;
+				padding-left: 120px;
+			}
+			address {
+				font-style: normal;
+				p {
+					margin: 0;
+					@include breakpoint(medium only) {
+						display: inline;
+						&::after {
+							content: ', ';
+							display: inline;
+						}
+					}
+					&:last-of-type {
+						@include breakpoint(medium only) {
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		.borders-location-link {
+			&::after {
+				background-image: url('assets/img/enterprise-site-ise-site-icon-right-chevron.svg');
+				background-position: 50%;
+				background-repeat: no-repeat;
+				content: '';
+				display: inline-block;
+				height: 10px;
+				margin-left: 0.375em;
+				width: 10px;
+			}
+		}
+	}
+	.borders-post-meta-origin {
+		margin: 0 0 2rem;
+	}
+	.borders-post-meta-destination {
+		margin: 2rem 0;
+	}	
+}
+.borders-post-content {
+	@include breakpoint(small only) {
+		margin-bottom: 1.5rem;
+	}
+	.borders-post-content-map {
+		border: 1px solid $grey-30;
+		height: 80vh;
+		width: 100%;
+		@include breakpoint(medium) {
+			margin: 0 0 1.25rem;
+		}
+		@include breakpoint(medium only) {
+			height: 400px;
+		}
+		@include breakpoint(small only) {
+			height: 300px;
+		}
+	}	
+}
+
+
+
+/*--------------------------------------------------------------
+4.0 Locations Tool
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+4.1 Archive
+--------------------------------------------------------------*/
+#tool-locations {
+	.tool-locations-filter {
+		background-color: $grey-10;	
+		padding: 40px 0;
+		@include breakpoint(medium down) {
+	    padding: 20px 0;
+	  }
+		.form-field {
+			margin-bottom: 20px;
+		}
+	}
+	.tool-locations-map {
+		border-bottom: 1px solid $grey-50;
+		border-top: 1px solid $grey-50;
+		height: 80vh;
+		position: relative;
+		.tool-locations-map-marker {
+			animation: slide-in-blurred-top 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+			position: relative;
+			&:before {
+				background-image: url('assets/img/enterprise-site-ise-site-icon-map-marker-red-50.svg');
+        background-position: 50%;
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 30px;
+        left: -15px;
+        position: absolute;
+        top: -30px;
+        transition: all .35 ease-in-out;
+        width: 30px;
+			}
+			&:active,
+			&:focus,
+			&:hover {
+				cursor: pointer;
+				&:before {
+					background-image: url('assets/img/enterprise-site-ise-site-icon-map-marker-red-10.svg');
+				}
+			}
+		}
+		.tool-locations-map-location {
+			background: $white;
+			bottom: 0;
+			height: 0;
+			left: 0;
+      overflow: auto;
+      position: absolute;
+      right: 0;
+      transition: height 0.35s ease-in-out;
+      z-index: 10002;
+      &.active {
+      	border-bottom: 1px solid $grey-50;
+      	border-top: 1px solid $grey-50;
+      }
+      &::after {
+      	content: '';
+      	display: block;
+      	position: absolute;
+      }
+      .tool-locations-map-location-header {
+      	background-color: $grey-30;
+        border-bottom: 1px solid $grey-50;
+        padding: 20px 0;
+        @include breakpoint(small only) {
+        	position: sticky;
+        	top: 0;
+        	z-index: 1;
+      	}
+        .grid-x {
+        	justify-content: space-between;
+        	h2 {
+	        	margin: 0;
+	        	@include breakpoint(420 down) {
+	        		max-width: 92%;
+	        	}
+	        }
+	        .tool-locations-map-location-close {
+						@include breakpoint(420 down) {
+							width: initial;
+						}
+	        	position: relative;
+	        	&::before,
+				    &::after {
+			        background-position: 50%;
+			        background-repeat: no-repeat;
+			        background-size: contain;
+			        content: '';
+			        display: inline-block;
+			        right: 0;
+			        margin-top: -10px;
+			        position: absolute;
+			        top: 50%;
+			        transition: all .175s ease-in-out;
+				    }
+	        	&::before {
+							background-image: url("assets/img/enterprise-site-ise-site-icon-plus-red.svg");
+							height: 20px;
+							opacity: 0;
+							width: 18px;
+						}
+					 	&::after {
+			        background-image: url('assets/img/enterprise-site-ise-site-icon-close-red.svg');
+			        height: 20px;
+			        opacity: 1;
+			        width: 18px;
+				    }
+	        }
+        }
+      }
+      .tool-locations-map-location-body {
+      	padding: 30px 0;
+      	.tool-locations-map-location-body-map {
+      		border: 1px solid $grey-30;
+      		height: 300px;
+        	margin-bottom: 30px;
+        	.tool-locations-map-marker {
+        		&:active,
+						&:focus,
+						&:hover {
+							cursor: grab;
+							&:before {
+								background-image: url('assets/img/enterprise-site-ise-site-icon-map-marker-red-50.svg');
+							}
+						}
+        	}
+      	}
+      	.tool-locations-map-location-body-details {
+      		@include breakpoint(medium down) {
+						margin-bottom: 30px;
+					}
+      		ul {
+	      		list-style: none;
+		        margin: 0;
+		        padding: 0;
+		        &.tool-locations-map-location-body-details-details {
+		        	.tool-locations-map-location-body-details-details-title {
+		        		border-bottom: 1px solid $grey-30;
+								margin-bottom: 1rem;
+								padding-bottom: .5rem;
+		        	}
+		        	li {
+		        		display: inline-block;
+			        	overflow-wrap: break-word;
+			        	padding-right: 12px;
+	        			vertical-align: top;
+	        			width: 33%;
+	        			word-break: break-word;
+	        			@include breakpoint(small only) {
+	        				width: 50%;
+	        			}
+		        	}
+		        }
+		        &.tool-locations-map-location-body-details-additional-notes {
+		        	.tool-locations-map-location-body-details-additional-notes-title {
+		        		border-bottom: 1px solid $grey-30;
+								margin-bottom: 1rem;
+								padding-bottom: .5rem;
+		        	}
+		        }
+		        li {
+		        	display: block;
+		        	width: 100%;
+        			h4 {
+        				font-family: $body-font-family;
+        				font-size: 1rem;
+        				font-weight: 700;
+        				line-height: 1.05rem;
+        				margin-bottom: .5rem;
+        			}
+        			p {
+        				line-height: 1.35rem;
+        				margin-bottom: 1.5rem;
+        			}
+		        }
+	      	}
+      	}
+      	.tool-locations-map-location-body-permalink {
+      		display: block;
+      		margin: 0 0 1.5rem;
+      		&:after {
+      			background-image: url("assets/img/enterprise-site-ise-site-icon-right-chevron.svg");
+		        background-position: 50%;
+		        background-repeat: no-repeat;
+		        content: '';
+		        display: inline-block;
+		        height: 10px;
+		        margin-left: 0.375em;
+		        width: 10px;
+      		}
+      	}
+      	.tool-locations-map-location-body-contacts {
+      		.tool-locations-map-location-body-contacts-title {
+      			border-bottom: 1px solid $grey-30;
+						margin-bottom: 1rem;
+						padding-bottom: .5rem;
+      		}
+      		p {
+      			margin-bottom: 0;
+      		}
+      		.tool-locations-map-location-body-contact {
+		        display: inline-block;
+		        list-style: none;
+		        margin: 0 0 1.5rem;
+		        overflow-wrap: break-word;
+		        padding: 0;
+		        vertical-align: top;
+		        width: 50%;
+		        word-break: break-word;
+		        &:nth-of-type(odd) {
+		        	@include breakpoint(small only) {
+						    padding-right: 6px;
+						  }
+		        }
+		        &:nth-of-type(even) {
+		        	@include breakpoint(small only) {
+						    padding-left: 6px;
+						  }
+		        }
+		        li {
+		        	overflow-wrap: break-word;
+		        	word-break: break-word;
+		        	&:first-of-type {
+		        		font-weight: 700;
+		        	}
+		        	&.tool-locations-map-location-body-contact-phone,
+		        	&.tool-locations-map-location-body-contact-mobile,
+		        	&.tool-locations-map-location-body-contact-fax,
+		        	&.tool-locations-map-location-body-contact-email {
+		        		word-break: break-all;
+		        	}
+		        }
+		      }
+      	}
+      }
+		}
+	}
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+/*--------------------------------------------------------------
+4.2 Single
+--------------------------------------------------------------*/
+.locations-post-content-map {
+	border: 1px solid $grey-30;
+	height: 40vh;
+	@include breakpoint(medium down) {
+		height: 50vh;
+	}
+}
+.locations-post-content-list-container {
+	list-style: none;
+	margin: 1.5rem 0;
+	padding: 0;
+	@include breakpoint(medium down) {
+		margin: 1.5rem 0
+	}
+	.is-active {
+		a,
+		a:visited {
+			.locations-post-content-list-title {
+				&:after {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	a,
+	a:visited {
+		text-decoration: none;
+		.locations-post-content-list-title {
+			&:after {
+				background-image: url('assets/img/enterprise-site-ise-site-icon-down-arrow.svg');
+				background-position: 50%;
+				background-repeat: no-repeat;
+				content: '';
+				display: inline-block;
+				height: 9px;
+				margin-left: 8px;
+				transition: all .35s ease-in-out;
+				width: 13px;
+			}
+		}
+	}
+	.locations-post-content-list {
+		&.locations-post-content-list-notes {
+			.locations-post-content-list-content {
+				li {
+					width: 100%;
+					&:nth-of-type(odd) {
+						@include breakpoint(small only) {
+							padding: 0;
+						}
+					}
+					&:nth-of-type(even) {
+						@include breakpoint(small only) {
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+		.locations-post-content-list-content {
+			align-items: stretch;
+			border-top: 1px solid $grey-30;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			list-style: none;
+			margin-top: .5rem;
+			padding: .5rem 0 0;
+			width: 100%;
+			li {
+				display: inline-block;
+				@include breakpoint(large) {
+					padding-right: 1.5rem;
+					width: 20%;
+				}
+				@include breakpoint(medium only) {
+					padding-right: 1rem;
+					width: 33.333%;
+				}
+				&:nth-of-type(3n) {
+					@include breakpoint(medium only) {
+						padding: 0;
+					}
+				}
+				&:nth-of-type(odd) {
+					@include breakpoint(small only) {
+						padding-right: 6px;
+					}
+				}
+				&:nth-of-type(even) {
+					@include breakpoint(small only) {
+						padding-left: 6px;
+					}
+				}
+				@include breakpoint(small only) {
+					width: 50%;
+				}
+				dl {
+					margin: .5rem 0 0;
+					dt {
+						font-family: $body-font-family;
+						font-weight: 700;
+						word-break: break-word;
+					}
+					dd {
+						margin: 0;
+						word-break: break-word;
+					}
+				}
+				ul {
+					margin: .5rem 0 1.25rem;
+					padding: 0;
+					@include breakpoint(small only) {
+			      margin: .5rem 0 1rem;
+			    }
+					li {
+						width: 100%;
+						word-break: break-all;
+						@include breakpoint(medium only) {
+							padding: 0;
+						}
+						&:nth-of-type(odd) {
+							@include breakpoint(small only) {
+								padding: 0;
+							}
+						}
+						&:nth-of-type(even) {
+							@include breakpoint(small only) {
+								padding: 0;
+							}
+						}
+						&:first-of-type,
+						&:nth-of-type(2) {
+							word-break: break-word;
+						}
+						&:first-of-type {
+							font-family: $body-font-family;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}	
+}
+
+
+
+/*--------------------------------------------------------------
+4.3 Social Share
+--------------------------------------------------------------*/
+.tools-post-social-share {
+	margin: 2rem 0 0;
+	@include breakpoint(medium down) {
+		margin: 0;
+		padding: 0;
+	}
+	a,
+	a:visited {
+		@include breakpoint(medium) {
+			margin-right: .5rem;
+		}
+		@include breakpoint(small only) {
+			width: initial;
+		}
+	}
+}

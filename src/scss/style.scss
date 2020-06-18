@@ -1,0 +1,138 @@
+/*!
+Theme Name: Enterprise-Site
+Theme URI: 
+Description: Boilerplate startup theme for use with web projects.
+Version: 1.0
+Author: Nathan M. House
+Author URI: https://nathanmhouse.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: enterprise-site
+*/
+
+// Import variables and fonts
+@import 'settings/variables';
+@import 'settings/fonts';
+
+// Import FontAwesome
+@import 'vendors/fontawesome';
+@import 'brands';
+@import 'solid';
+@import 'fontawesome';
+
+// Import Foundation
+@import 'vendors/foundation';
+@import 'foundation';
+
+// Import Fancybox
+@import 'vendors/fancybox';
+
+// Import Slick
+@import 'vendors/slick';
+
+// Import WordPress
+@import 'vendors/wordpress';
+
+// Foundation scss components
+// Comment in as needed
+
+// Adjust breakpoints
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1025px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large xlarge);
+
+// Global styles
+@include foundation-global-styles;
+// @include foundation-forms;
+// @include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+// @include foundation-button;
+// @include foundation-button-group;
+// @include foundation-close-button;
+// @include foundation-label;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-switch;
+@include foundation-table;
+
+// Basic components
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-callout;
+// @include foundation-card;
+// @include foundation-dropdown;
+// @include foundation-pagination;
+// @include foundation-tooltip;
+
+// Containers
+// @include foundation-accordion;
+// @include foundation-media-object;
+// @include foundation-orbit;
+// @include foundation-responsive-embed;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+
+// Menu-based containers
+// @include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-accordion-menu;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown-menu;
+
+// Layout components
+// @include foundation-off-canvas;
+// @include foundation-reveal;
+// @include foundation-sticky;
+// @include foundation-title-bar;
+// @include foundation-top-bar;
+
+// Helpers
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+
+// Import custom vendor
+@import 'vendors/custom-vendor';
+
+// Import base
+@import 'settings/base';
+
+// Import header
+@import 'partials/header';
+
+// Import site
+@import 'partials/site';
+
+// Import footer
+@import 'partials/footer';
+
+// Import flexible content
+@import 'partials/flexible-content';
+
+// Import modules
+@import 'partials/modules';
+
+// Import custom posts
+@import 'partials/custom-posts';
+
+// Import tools
+@import 'partials/tools';
+
+// Import search
+@import 'partials/search';
+// Import 404
+@import 'partials/404';

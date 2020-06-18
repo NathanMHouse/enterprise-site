@@ -1,0 +1,503 @@
+/**
+ * Description:     Base
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Base
+  1.1 Typography
+  1.2 Layout
+  1.3 Forms
+  1.4 Functions
+
+
+/*--------------------------------------------------------------
+1.0 Base
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Typography
+--------------------------------------------------------------*/
+body {
+  color: $grey-90;
+  font-family: $body-font-family;
+  font-size: 1em;
+  line-height: 1.5;
+  h1 {
+    font-family: $headline-font-family;
+    font-size: 2.625em;
+    font-weight: 700;
+    line-height: 2.625rem;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    @include breakpoint(small only) {
+      font-size: 2.1em;
+    }
+  }
+
+  h2 {
+    color: $blue-100;
+    font-family: $headline-font-family;
+    font-size: 1.75em;
+    font-weight: 500;
+    line-height: 1.875rem;
+    margin: 0 0 1.25rem;
+    @include breakpoint(small only) {
+      font-size: 1.4em;
+      margin: 0 0 .75em;
+    }
+  }
+
+  h3 {
+    color: $blue-100;
+    font-family: $headline-font-family;
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: 1.65rem;
+    margin: 0 0 0.625rem;
+    @include breakpoint(small only) {
+      font-size: 1.15em;
+      line-height: 1.45rem;
+    }
+  }
+
+  h4 {
+    font-family: $headline-font-family;
+    font-size: 1.125em;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 0 0 0.5rem;
+    @include breakpoint(small only) {
+      font-size: 1em;
+    }
+  }
+
+  h5 {
+    font-family: $headline-font-family;
+    font-size: .9375em;
+    font-weight: 500;
+    line-height: 1.5625rem;
+    margin: 0 0 0.5rem;
+  }
+
+  h6 {
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 1.375rem;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    color: $grey-90;
+    line-height: 1.375rem;
+    margin: 0 0 1.25rem;
+    @include breakpoint(small only) {
+      margin: 0 0 1rem;
+    }
+  }
+
+  a,
+  a:visited,
+  button {
+    color: $red-50;
+    transition: all .35s ease-in-out;
+    @include breakpoint(420 down) {
+      width: 100%;
+    }
+    &.btn-primary,
+    &.btn-secondary,
+    &.btn-text {
+      display: inline-block;
+      font-family: $headline-font-family;
+      font-size: 0.9375em;
+      font-weight: 700;
+      line-height: 1rem;
+      text-transform: uppercase;
+      @include breakpoint(small only) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40%;
+        text-align: center;
+      }
+      &:nth-of-type(2) {
+        margin-left: 30px;
+        @include breakpoint(700 down) {
+          display: block;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+        @include breakpoint(small only) {
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      &:disabled {
+        &:active,
+        &:focus,
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+    &.btn-primary,
+    &.btn-secondary {
+      border: 2px solid $red-50;
+      border-radius: 2px;
+      letter-spacing: 0.09375rem;
+      padding: 0.875rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      @include breakpoint(small only) {
+        padding: 0.875rem 1rem;
+      }
+      @include breakpoint(420 down) {
+        max-width: 100%;
+      }
+      &:active,
+      &:focus,
+      &:hover {
+        border: 2px solid $red-10;
+        transition: all .35s ease-in-out;
+      }
+      &:disabled {
+        border-color: $grey-50;
+        &:active,
+        &:focus,
+        &:hover {
+          border: 2px solid $grey-50;
+        }
+      }
+    }
+    &.btn-secondary,
+    &.btn-text {
+      &:disabled {
+        color: $grey-50;
+      }
+    }
+    &.btn-primary {
+      background-color: $red-50;
+      color: $white;
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+        background-color: $red-10;
+        transition: all .35s ease-in-out;
+      }
+      &:disabled {
+        background-color: $grey-50;
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: $grey-50;
+        }
+      }
+    }
+    &.btn-secondary {
+      border: 2px solid $red-50;
+      color: $red-50;
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+        background-color: $red-10;
+        transition: all .35s ease-in-out;
+      }
+      &:disabled {
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: transparent;
+          color: $grey-50;
+        }
+      }
+    }
+    &.btn-text {
+      padding: 0.875rem 0;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      color: $red-10;
+      cursor: pointer;
+      transition: all .35s ease-in-out;
+    }
+  }
+  blockquote {
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: 2.125rem;
+    margin: 0;
+    padding: 2rem;
+    @include breakpoint(992) {
+      padding: 2rem 3rem;
+    }
+    @include breakpoint(medium only) {
+      font-size: 1.5em;
+      line-height: 2rem;
+    }
+    @include breakpoint(small only) {
+      margin: 0 0 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    p {
+      display: inline;
+      font-family: $headline-font-family;
+      margin: 0;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 13px;
+        position: absolute;
+        width: 16px;
+      }
+      &::before {
+        background-image: url('assets/img/enterprise-site-icon-left-quote.svg');
+        left: -1rem;
+        top: -1rem;
+      }
+      &::after {
+        background-image: url('assets/img/enterprise-site-ise-site-icon-right-quote.svg');
+        right: -1rem;
+        bottom: -1rem;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+1.2 Layout
+--------------------------------------------------------------*/
+.padding-both {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @include breakpoint(medium down) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.padding-top {
+  padding-top: 60px;
+  @include breakpoint(medium down) {
+    padding-top: 30px;
+  }
+}
+
+.padding-bottom {
+  padding-bottom: 60px;
+  @include breakpoint(medium down) {
+    padding-bottom: 30px;
+  }
+}
+
+padding-none {
+  padding-bottom: 0;
+  padding-top: 0;   
+}
+
+.background-white {
+  background-color: $white;
+}
+
+.background-grey {
+  background-color: $grey-10;
+}
+
+.hide-on-mobile {
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
+
+/*--------------------------------------------------------------
+1.3 Forms
+--------------------------------------------------------------*/
+.form-field {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 20px;
+  width: 100%;
+  @include breakpoint(medium down) {
+    margin-bottom: 20px;
+  }
+  @include breakpoint(small only) {
+    padding: 0;
+  }
+  &.form-field-33,
+  &.form-field-50,
+  &.form-field-66 {
+    @include breakpoint(small only) {
+      width: 100%;
+    }
+  }
+  &.form-field-33 {
+    @include breakpoint(medium) {
+      width: 32.99%;
+    }
+  }
+  &.form-field-50 {
+    @include breakpoint(medium) {
+      width: 49.99%;
+    }
+  }
+  &.form-field-66 {
+    @include breakpoint(medium) {
+      width: 65.99%;
+    }
+  }
+  &.form-field-hidden {
+    margin: 0;
+    padding: 0;
+  }
+  &:first-of-type,
+  &:nth-of-type(3n + 1) {
+      padding: 0;
+  }
+  label {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  select,
+  input {
+    background-color: $white;
+    border: 2px solid $grey-30;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+    line-height: 1.4rem;
+    margin: 0;
+    max-width: 100%;
+    padding: 0.6875rem 1rem;
+    width: 100%;
+    &#form-field-search {
+      background-image: url("assets/img/enterprise-site-ise-site-icon-search-red.svg");
+      background-position: 98% 50%;
+      background-repeat: no-repeat;
+    }
+    &:disabled {
+      background-color: $grey-30;
+      cursor: not-allowed;
+    }
+  }
+  select {
+    appearance: none;
+    background-image: url("assets/img/enterprise-site-ise-site-icon-down-arrow.svg");
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+    &::-ms-expand {
+      display: none;
+    }
+    option {
+      font-weight: 500;
+    }
+  }
+  &.form-field-combo {
+    display: flex;
+    input,
+    select {
+      &:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    input {
+      &[type="submit"] {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        @include breakpoint(small only) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &.form-field-text-right {
+    text-align: right;
+  }
+}
+[type="search"] {
+  -webkit-appearance: none;
+}
+
+
+/*--------------------------------------------------------------
+1.4 Functions
+--------------------------------------------------------------*/
+.taxonomy-link,
+.taxonomy-link:visited {
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+  .taxonomy-link-icon,
+  .taxonomy-link-title {
+    background-color: $red-50;
+    border-radius: 2px;
+    color: $white;
+    display: inline-block;
+    transition: all .35s ease-in-out;
+  }
+  .taxonomy-link-icon {
+    background-image: url('assets/img/enterprise-site-ise-site-icon-post-white.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    height: 40px;
+    margin-right: 6px;
+    width: 40px;
+    vertical-align: top;
+    @include breakpoint(992 down) {
+      height: 37px;
+      width: 37px;
+    }
+    @include breakpoint(small only) {
+      height: 35px;
+      width: 35px;
+    }
+    &:before {
+      content: '\feff';
+    }
+    &.taxonomy-link-icon-videos {
+      background-image: url('assets/img/enterprise-site-ise-site-icon-video-alt-white.svg');
+    }
+    &.taxonomy-link-icon-whitepapers {
+      background-image: url('assets/img/enterprise-site-ise-site-icon-whitepapers-white.svg');
+    }
+    &.taxonomy-link-icon-events-webinars {
+      background-image: url('assets/img/enterprise-site-ise-site-icon-events-webinars-white.svg');
+    }
+    &.taxonomy-link-icon-infographics {
+      background-image: url('assets/img/enterprise-site-ise-site-icon-infographics-white.svg');
+    }
+  }
+  .taxonomy-link-title {
+    font-family: $body-font-family;
+    padding: 8px 14px;
+    @include breakpoint(992 down) {
+      font-size: .875em;
+    }
+    @include breakpoint(small only) {
+      font-size: 1em;
+    }
+  }
+}
+.taxonomy-link:active,
+.taxonomy-link:focus,
+.taxonomy-link:hover {
+  .taxonomy-link-icon,
+  .taxonomy-link-title {
+    background-color: $red-10;
+    transition: all .35s ease-in-out;
+  }
+}

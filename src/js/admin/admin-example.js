@@ -1,0 +1,1 @@
+console.log('admin-example.js running');

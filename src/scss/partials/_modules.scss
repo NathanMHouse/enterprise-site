@@ -1,0 +1,738 @@
+/**
+ * Description:     Modules
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Front Page Banner
+2.0 Front Page Banner Tracking Widget
+3.0 Banner
+4.0 Breadcrumbs
+5.0 Global CTA
+6.0 Scroll Top
+7.0 Archive Filter
+8.0 CTA Row
+9.0 Related Content
+10.0 Image and Text
+11.0 Tools CTA Row
+  
+  
+/*--------------------------------------------------------------
+1.0 Front Page Banner
+--------------------------------------------------------------*/
+.front-page-banner-container {
+  .front-page-banner-tracking-widget-container {
+    position: relative; 
+  }
+  .module-front-page-banner {
+    border-bottom: 5px solid $red-50;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint(large) {
+      border-top: 2px solid $grey-10;
+    }
+    @include breakpoint(medium) {
+      height: 32rem;
+    }
+    .module-front-page-banner-slide {
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 1;
+      padding: 60px 0;
+      @include breakpoint(medium) {
+        height: 100%;
+      }
+      @include breakpoint(small only) {
+        padding: 30px 0;
+      }
+      .grid-container {
+        height: 100%;
+        .module-front-page-banner-content {
+          align-content: center;
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          height: 100%;
+          position: relative;
+          z-index: 2;
+          .module-front-page-banner-content-title,
+          .module-front-page-banner-content-subtitle {
+            color: $white;
+          }
+          .module-front-page-banner-content-title {
+            font-size: 2.8125em;
+            line-height: 1em;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            @include breakpoint(small only) {
+              font-size: 2.1em;
+              line-height: 1.15em;
+              text-align: center;
+            }
+          }
+          .module-front-page-banner-content-subtitle {
+            line-height: 1.875rem;
+            margin-bottom: 1.5rem;
+            @include breakpoint(small only) {
+              line-height: 1.5rem;
+              text-align: center;
+            }
+          }
+          .module-front-page-banner-content-ctas {
+            margin-bottom: 0;
+            a,
+            a:visited {
+              color: $white;
+              &.btn-text {
+                &:active,
+                &:focus,
+                &:hover {
+                  opacity: 0.6;
+                }
+              }
+              @include breakpoint(small only) {
+                display: block;
+                text-align: center;
+              }
+            }
+          }
+        }
+        &:after {
+          clear: both;
+          content: '';
+        }
+      }
+      &:after {
+        background-color: rgba(0, 0, 0, .45);
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .module-front-page-banner-video {
+        display: none;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    .slick-list {
+      height: 100%;
+      transform: none;
+      .slick-track {
+        height: 100%;
+        transform: none;
+        @include breakpoint(small only) {
+          display: flex;
+        }
+        .slick-slide {
+          @include breakpoint(small only) {
+            height: auto;
+          }
+          &:first-of-type {
+            @include breakpoint(small only) {
+              margin-left: -1px;
+            }
+          }
+          &:last-of-type {
+            @include breakpoint(small only) {
+              margin-right: -1px;
+            }
+          }
+        }
+      }
+    }
+    &.slick-initialized {
+      .module-front-page-banner-video {
+        display: block;
+      }
+    }
+  }
+}
+.module-front-page-banner-controls {
+  background-color: $grey-90;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  .slick-dots {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li {
+      background-color: $grey-90;
+      display: inline-block;
+      height: 100%;
+      flex: 1;
+      border-left: 1px solid $grey-100;
+      border-right: 1px solid $grey-100;
+      &:first-of-type {
+        border-right: 1px solid transparent;
+        &:active,
+        &:focus,
+        &:hover {
+          border-color: $red-50;
+          transition: all .35s ease-in-out;
+        }
+      }
+      &:last-of-type {
+        border-left: 1px solid transparent;
+        &:active,
+        &:focus,
+        &:hover {
+          border-color: $red-50;
+          transition: all .35s ease-in-out;
+        }
+      }
+      &.slick-active {
+        border-color: $red-50;
+      }
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $red-50;
+        cursor: pointer;
+        transition: all .35s ease-in-out;
+      }
+      .module-front-page-banner-controls-button {
+        height: 100%;
+        margin: 0;
+        padding: 1.25rem 1.875rem;
+        text-align: left;
+        @include breakpoint(767 down) {
+          padding: 1rem 1.875rem;
+        }
+        @include breakpoint(small only) {
+          padding: .5rem;
+          text-align: center;
+          width: 100%;
+        }
+        &:active,
+        &:focus,
+        &:hover {
+          outline: none;
+        }
+        h3 {
+          color: $white;
+          line-height: 1.375rem;
+          margin: 0 0 0.5rem;
+          text-transform: uppercase;
+          &.module-front-page-banner-controls-button-number {
+            display: none;
+            @include breakpoint(small only) {
+              display: block;
+            }
+          }
+          &.module-front-page-banner-controls-button-title {
+            @include breakpoint(767 down) {
+              font-size: 1em;
+              margin-bottom: 0;
+            }
+            @include breakpoint(small only) {
+              display: none;
+            }
+          }
+        }
+        p {
+          color: $white;
+          line-height: 1.1875rem;
+          margin: 0;
+          @include breakpoint(767 down) {
+            display: none;
+          }
+        }
+      }
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $red-50;
+        transition: background-color .35s ease-in-out;
+      }
+      &.slick-active {
+        background-color: $red-50;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+2.0 Front Page Banner Tracking Widget
+--------------------------------------------------------------*/
+.module-front-page-banner-tracking-widget {
+  color: $white;
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  width: 300px;
+  z-index: 1001;
+  @include breakpoint(767 down) {
+    width: 240px;
+  }
+  @include breakpoint(small only) {
+    display: none;
+  }
+  #module-front-page-banner-tracking-widget-form {
+    background-color: rgba(0,0,0,0.4);
+    padding: 1.25rem 1rem;
+    .module-front-page-banner-tracking-widget-title {
+      color: $white;
+      font-family: $headline-font-family;
+      font-size: 1.125em;
+      font-weight: 500;
+      &:before {
+        background-image: url('assets/img/enterprise-site-icon-location-marker-red.svg');
+        background-position: 50%;
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: 18px;
+        margin-right: 0.125em;
+        vertical-align: middle;
+        width: 15px;
+      }
+    }
+    .module-front-page-banner-tracking-widget-description {
+      color: $white;
+      font-size: 0.9375em;
+      line-height: 1.0625rem;
+    }
+
+    .form-field {
+      margin-bottom: 0.85rem;
+      padding: 0;
+      #module-front-page-banner-widget-form-select {
+        padding: 0.5625rem 0.625rem;
+      }
+      select,
+      input {
+        border: none;
+      }
+      input {
+        padding: 0.5625rem 0.625rem;
+      }
+      button {
+        padding: 0.6875rem 1rem;
+      }
+      &:nth-of-type(3) {
+        display: none;
+      }
+      &.form-field-combo {
+        input {
+          flex: 2;
+        }
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .module-front-page-banner-tracking-widget-cta,
+  .module-front-page-banner-tracking-widget-cta:visited {
+    background-color: $red-50;
+    color: $white;
+    display: block;
+    font-family: $headline-font-family;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .35s ease-in-out;
+    &:first-of-type {
+      border-bottom: 1px solid $grey-100;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $red-10;
+      transition: all .35s ease-in-out;
+    }
+    &.module-front-page-banner-tracking-widget-cta-login,
+    &.module-front-page-banner-tracking-widget-cta-sales-ready {
+      &:before {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        margin-right: 0.5rem;
+        vertical-align: text-top;
+      }
+    }
+    &.module-front-page-banner-tracking-widget-cta-login {
+      &:before {
+        background-image: url('assets/img/enterprise-site-ise-site-icon-profile-white.svg');
+        height: 20px;
+        width: 18px;
+      }
+    }
+    &.module-front-page-banner-tracking-widget-cta-sales-ready {
+      &:before {
+        background-image: url('assets/img/enterprise-site-ise-site-icon-dollar-box-white.svg');
+        height: 20px;
+        width: 16px;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+3.0 Banner
+--------------------------------------------------------------*/
+.module-row-banner {
+  align-items: center;
+  display: flex;
+  @include breakpoint(large) {
+    border-top: 2px solid $grey-10;
+  }
+  &.module-row-banner-w-background-image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    @include breakpoint(large) {
+      min-height: 380px;
+    }
+    @include breakpoint(medium only) {
+      padding: 60px 0;
+    }
+    @include breakpoint(small only) {
+      padding: 30px 0;
+    }
+    .grid-container {
+      .module-row-banner-title,
+      .module-row-banner-description {
+        color: $white;
+      }
+    }
+  }
+  &.module-row-banner-wo-background-image {
+    min-height: 12.5rem;
+    padding: 60px 0;
+    @include breakpoint(large) {
+      background-color: $white;
+      min-height: 12.5rem;
+      padding: 60px 0;
+      position: relative;
+      z-index: 1;
+    }
+    @include breakpoint(small only) {
+      padding: 30px 0;
+    }
+    .grid-container {
+      .module-row-banner-title,
+      .module-row-banner-description {
+        color: $grey-90;
+      }
+    }
+  }
+  .grid-container {
+    flex-basis: 100%;
+    .module-row-banner-title,
+    .module-row-banner-description {
+      text-align: center;
+    }
+    .module-row-banner-title {
+      margin: 0;
+    }
+    .module-row-banner-description {
+      font-family: $body-font-family;
+      line-height: 1.8125rem;
+      margin: 1.875rem 0 0;
+      @include breakpoint(medium down) {
+        line-height: 1.5rem;
+        margin: 1rem 0 0;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+4.0 Breadcrumbs
+--------------------------------------------------------------*/
+.module-breadcrumbs {
+  background-color: $grey-10;
+  color: $grey-70;
+  font-size: 0.8125em;
+  line-height: 1rem;
+  padding: 16px 0;
+  .module-breadcrumbs-separator {
+    background-image: url('assets/img/enterprise-site-ise-site-icon-breadcrumb-separator.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 8px;
+    margin: 0 2px;
+    width: 6px;
+  }
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+  a:active,
+  a:focus,
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+/*--------------------------------------------------------------
+5.0 Global CTA
+--------------------------------------------------------------*/
+.module-global-cta {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  @include breakpoint(medium down) {
+    padding: 30px 0;
+  }
+  .module-global-cta-title,
+  .module-global-cta-description {
+    color: $white;
+    text-align: center;
+  }
+  .module-global-cta-description {
+    font-family: $body-font-family;
+    font-weight: 400;
+    margin: 0 0 2.25rem;
+    @include breakpoint(small only) {
+      margin: 0 0 2rem;
+    }
+  }
+  .cta-block {
+    @include breakpoint(small only) {
+      margin-bottom: 2rem;
+    }
+    &:last-of-type {
+      @include breakpoint(small only) {
+        margin-bottom: 0;
+      }
+    }
+    .cta-block-icon {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      width: 15%;
+      @include breakpoint(small only) {
+        display: block;
+        margin: 0 0 10px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .cta-block-content {
+      display: inline-block;
+      padding-left: 10px;
+      width: 83%;
+      @include breakpoint(small only) {
+        padding: 0;
+        width: 100%;
+      }
+      .cta-block-title,
+      .cta-block-description {
+        color: $white;
+      }
+      .cta-block-title {
+        @include breakpoint(small only) {
+          text-align: center;
+        }
+      }
+      .cta-block-description {
+        @media screen and #{breakpoint(420)} and #{breakpoint(small down)} {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 50%;
+        }
+      }
+      a,
+      a:visited {
+        &.btn-text {
+          color: $white;
+        }
+      }
+      a:active, 
+      a:focus,
+      a:hover {
+        &.btn-text {
+          opacity: .6;
+        }
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+6.0 Scroll Top
+--------------------------------------------------------------*/
+.module-scroll-top {
+  background-color: $red-50;
+  border-radius: 2px;
+  bottom: 40px;
+  color: $white;
+  display: none;
+  padding: 1em;
+  position: fixed;
+  right: 40px;
+  z-index: 1;
+  span {
+    display: none;
+    font-family: $body-font-family;
+  }
+  &.active,
+  &.focus,
+  &:hover {
+    color: $white;
+    background-color: $red-10;
+    transition: all .35s ease-in-out;
+  }
+}
+
+
+/*--------------------------------------------------------------
+7.0 Archive Filter
+--------------------------------------------------------------*/
+.module-archive-filter {
+  background-color: $grey-10;
+  @include breakpoint(large) {
+    padding: 40px 0;
+  }
+  @include breakpoint(medium down) {
+    padding: 20px 0;
+  }
+  .form-field {
+    margin-bottom: 20px;
+    #module-archive-filter-form-input-submit {
+      @include breakpoint(medium down) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+8.0 CTA Row
+--------------------------------------------------------------*/
+.module-cta-row {
+  margin-bottom: 60px;
+  @include breakpoint(medium down) {
+    margin-bottom: 30px;
+  }
+  &.background-image {
+    a,
+    a:visited {
+      color: $white;
+      &.btn-text {
+        &:active,
+        &:focus,
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .module-cta-row-title,
+    .module-cta-row-description,
+    .module-cta-row-ctas {
+      text-align: center;
+    }
+    .module-cta-row-title,
+    .module-cta-row-description {
+      color: $white;
+    }
+    .module-cta-row-description {
+      font-family: $body-font-family;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .module-cta-row-form {
+      input {
+        flex: 3;
+      }
+      button {
+        flex: 1;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+9.0 Related Content
+--------------------------------------------------------------*/
+.module-related-content {
+  background-color: $grey-10;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @include breakpoint(medium down) {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .custom-posts-excerpt {
+    @include breakpoint(small only) {
+      margin-bottom: 30px;
+    }
+    &:last-of-type {
+      @include breakpoint(small only) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------------------------------
+10.0 Image and Text
+--------------------------------------------------------------*/
+.module-image-and-text-image {
+  @include breakpoint(small only) {
+    margin-bottom: 20px;
+  }  
+}
+.module-image-and-text-content-ctas {
+  @include breakpoint(medium down) {
+    margin-bottom: 0;
+  }
+}
+
+
+/*--------------------------------------------------------------
+11.0 Tools CTA Row
+--------------------------------------------------------------*/
+.module-tools-cta-row {
+  background-color: $grey-10;
+  padding: 20px;
+  @include breakpoint(small only) {
+    padding: 20px 0
+  }
+  .module-tools-cta-row-content {
+    @include breakpoint(medium) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      h2 {
+        margin: 0 30px 0 0;
+      }
+    }
+  }
+  @include breakpoint(small only) {
+    h2 {
+      text-align: center;
+    }
+  }
+}

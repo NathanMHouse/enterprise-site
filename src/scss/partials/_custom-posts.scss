@@ -1,0 +1,93 @@
+/**
+ * Description:     Custom Posts
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Custom Posts
+	1.1 Single
+
+
+/*--------------------------------------------------------------
+1.0 Custom Posts
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Single
+--------------------------------------------------------------*/
+.custom-posts-single {
+	h3,
+	h4,
+	h5 {
+		color: $grey-90;
+	}
+	.custom-posts-post-meta {
+		margin: 0 0 1rem;
+		dt {
+			font-family: $body-font-family;
+			font-weight: 700;
+			@include breakpoint(medium only) {
+				display: inline-block;
+			}
+			@include breakpoint(small only) {
+				float: left;
+				margin-right: .5rem;
+				min-width: 50px;
+			}
+			&.custom-posts-post-meta-taxonomy {
+				&+dd {
+					a,
+					a:visited {
+						color: $grey-90;
+						text-decoration: none;
+					}
+					a:active,
+					a:focus,
+					a:hover {
+						color: $red-10;
+					}
+				}
+			}
+		}
+		dd {
+			margin: 0 0 1rem;
+			@include breakpoint(medium only) {
+				display: inline-block;
+				margin: 0 .75rem 0 0;
+			}
+			@include breakpoint(small only) {
+				margin: 0 0 .5rem;
+			}
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+	.custom-posts-post-social-share {
+		@include breakpoint(medium down) {
+			border-bottom: 1px solid $red-50;
+			margin: 0 0 2rem;
+			padding-bottom: 2rem;
+		}
+		a,
+		a:visited {
+			@include breakpoint(medium) {
+				margin-right: .5rem;
+			}
+			@include breakpoint(small only) {
+				width: initial;
+			}
+		}
+	}
+	.custom-posts-post-content {
+		img {
+			@include breakpoint(medium down) {
+				max-width: 400px;
+				width: 100%;
+			}	
+		}
+	}
+}

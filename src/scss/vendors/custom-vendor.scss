@@ -1,0 +1,31 @@
+/**
+ * Description:     Custom Vendor
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+ */
+
+ .fa-2x {
+ 	@include breakpoint(medium down) {
+ 		font-size: 1.5em;
+ 	}
+ }
+
+ .addtoany_list {
+ 	@include breakpoint(small only) {
+ 		line-height: 2rem !important;
+ 	}
+ 	a {
+ 		img {
+ 			@include breakpoint(small only) {
+ 				padding: 0 4px;
+ 			}
+ 		}
+ 		&:first-of-type {
+ 			img {
+ 				@include breakpoint(small only) {
+ 					padding-left: 0;
+ 				}
+ 			}
+	 	}
+ 	}
+ }

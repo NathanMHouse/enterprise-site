@@ -1,0 +1,82 @@
+/**
+ * Description:     Search
+ * Author:          Nathan M. House
+ * Author URI:      https://nathanmhouse.com.com
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Search
+	1.1 Search Form
+	
+	
+
+/*--------------------------------------------------------------
+1.0 Search
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Search Form
+--------------------------------------------------------------*/
+.search-form {
+	border: 2px solid $grey-10;
+	margin-top: 2rem;
+	padding: 30px 20px;
+	@include breakpoint(medium) {
+		display: flex;
+	}
+	label {
+		color: $blue-100;
+		font-size: 1.05rem;
+		font-weight: 700;
+		@include breakpoint(medium) {
+			display: inline-block;
+			flex: 3;
+		}
+		@include breakpoint(small only) {
+			display: block;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+	}
+	input[type="search"] {
+		background-color: $white;
+		border: 2px solid $grey-30;
+		border-radius: 2px;
+		box-sizing: border-box;
+		line-height: 1.4rem;
+		margin: 0;
+		padding: 0.875rem 1.5rem;
+		width: 100%;
+	}
+	input[type="submit"] {
+		background: transparent;
+		border: 2px solid $red-50;
+		border-radius: 2px;
+		color: $red-50;
+		font-weight: 700;
+		letter-spacing: .1em;
+		margin-left: 30px;
+		padding: 0.875rem 1.5rem;
+		text-transform: uppercase;
+		transition: all .35s ease-in-out;
+		@include breakpoint(medium) {
+			flex: 1;
+		}
+		@include breakpoint(small only) {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+			cursor: pointer;
+			background-color: $red-10;
+			border: 2px solid $red-10;
+			transition: all .35s ease-in-out;
+		}
+	}
+}
