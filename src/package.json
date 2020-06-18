@@ -24,7 +24,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "foundation-sites": "^6.5.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "what-input": "^5.2.1"
   },
   "scripts": {
